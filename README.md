@@ -13,13 +13,13 @@ Integer = znaménko + [DECIMAL|HEXA|BINARY] \
 
 Float
   - číslo = 0123456789
-  - znaménko + (Číslo a oddělovač _, nezačíná _)*.(Číslo)* Validní: (.,0.1,0008.34,0_02.3,.3) Nevalidní (_., _._3, 42.233_222)
+  - znaménko + (Číslo a oddělovač _, nezačíná _)* .(Číslo)* Validní: (.,0.1,0008.34,0_02.3,.3) Nevalidní (_., _._3, 42.233_222)
 Boolean - Jo/Ne | jo/ne | jO/nE | JO/NE
 
 ### Operace - od nejvyšší priority po nejnížší
 závorky () - přednost operací\
 Mocnina - (datový typ)^(integer)\
-násobení * (false * true = true*false = false), lze násobit jakýkoliv typ, pro násobení float*integer se převede integer na float a pak se násobí 2 floaty\
+násobení * (false * true = true * false = false), lze násobit jakýkoliv typ, pro násobení float * integer se převede integer na float a pak se násobí 2 floaty\
 sčítání + (u booleanů jako XOR), podobně jako u násobení\
 porovnávání <,>,== porovná hodnotu stejných datových typů
 
