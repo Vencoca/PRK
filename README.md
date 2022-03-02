@@ -14,7 +14,12 @@ Integer = znaménko + [DECIMAL|HEXA|BINARY]
 Float
   - ČÍSLO = 0123456789
   - znaménko + (ČÍSLO a oddělovač _, nezačíná _)* .(ČÍSLO)* Validní: (.,0.1,0008.34,0_02.3,.3) Nevalidní (_., _._3, 42.233_222)
-Boolean - Jo/Ne | jo/ne | jO/nE | JO/NE
+
+Boolean 
+  - Jo/Ne | jo/ne | jO/nE | JO/NE
+
+String
+  - "ZNAK"
 
 ### Operace - od nejvyšší priority po nejnížší
 Závorky () - přednost operací\
