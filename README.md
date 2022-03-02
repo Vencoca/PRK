@@ -19,7 +19,10 @@ Boolean
   - Jo/Ne | jo/ne | jO/nE | JO/NE
 
 String
+  - ZNAK = Libovolný znak kromě ""
+  - ESCAPE = \n | \t | \"
   - "ZNAK"
+
 
 ### Operace - od nejvyšší priority po nejnížší
 Závorky () - přednost operací\
