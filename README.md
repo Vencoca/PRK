@@ -33,6 +33,3 @@ Porovnávání <,>,== porovná hodnotu stejných datových typů
 
 ### Komentáře
  - !* jakýkoliv znak *!
-
-
-
