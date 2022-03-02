@@ -32,8 +32,7 @@ Sčítání + (u booleanů jako XOR), podobně jako u násobení\
 Porovnávání <,>,== porovná hodnotu stejných datových typů
 
 ### Komentáře
-jednořádkové - !\
-víceřádkové - !* jakýkoliv znak *!
+ - !* jakýkoliv znak *!
 
 
 
