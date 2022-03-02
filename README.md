@@ -20,7 +20,7 @@ Boolean
 
 String
   - ZNAK = Libovolný znak kromě ""
-  - ESCAPE = \n | \t | \"
+  - ESCAPE = \n | \t | "&#92;""
   - "ZNAK"
 
 
