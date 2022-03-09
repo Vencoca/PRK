@@ -1,0 +1,28 @@
+## Ukol 1,2,3
+syntax = int|hex|func|expr;
+hex = "0x",hexnum;
+hexnum = hexnz,{hexdigit};
+int = nonz,{digit},["l"|"L"];
+nonz = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
+hexnz = nonz|"a"|"b"|"c"|"d"|"e"|"f"|"A"|"B"|"C"|"D"|"E"|"F";
+hexdigit = "0"|hexnz;
+digit = "0"|nonz;
+func = varid, "=", funcid, "(", [par] ,")";
+par = alf,{alf};
+varid = alf,{alf|digit};
+funcid = varid;
+alf = "a"|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"|"n"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|"A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"_";
+
+###Ukol 4,5
+syntax = prirad;
+expr=term, expr1;
+expr1="+",term,expr1|"-",term,expr1|;
+term=factor, term1;
+term1="*", factor, term1 | "/", factor, term1|;
+factor="(", expr , ")" | letter;
+letter="a";
+prirad = varid, "=",expr;
+varid = alf,{alf|digit};
+digit = "0"|nonz;
+nonz = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
+alf = "a"|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"|"n"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|"A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"_";
