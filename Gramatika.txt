@@ -1,5 +1,7 @@
-syntax = integer;
-integer = ["+"|"-"|""],[decimal|hexa|binary];
+syntax = integer|float;
+integer = signed|unsigned;
+unsigned = [decimal|hexa|binary];
+signed = ["+"|"-"],[decimal|hexa|binary];
 decimal = nonz,{digit}; 
 hexa = "h",hexnz,{hexdigit};
 binary = "b",["0"|"1"],{"0"|"1"};
@@ -7,3 +9,6 @@ nonz = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
 hexnz = nonz|"a"|"b"|"c"|"d"|"e"|"f"|"A"|"B"|"C"|"D"|"E"|"F";
 hexdigit = "0"|hexnz|"_";
 digit = "0"|nonz|"_";
+float = {decimal},".",{decimal};
+bool = "Jo"|"Ne"|"JO"|"NE"|"jo"|"ne"|"jO"|"nE";
+string = "'"{}"'"
