@@ -1,4 +1,4 @@
-// Generated from c:\Users\vacla\Documents\Github\PRK\Grammar\VBG.g4 by ANTLR 4.8
+// Generated from \\wsl$\Ubuntu20.04LTS\home\vencoca\PRK\Grammar\VBG.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
