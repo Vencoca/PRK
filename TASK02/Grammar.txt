@@ -1,0 +1,14 @@
+syntax = type;
+type = integer|float|bool|string;
+integer = decimal|hexa|binary;
+decimal = {"-"},nonz,{digit}; 
+hexa = {"-"},"h",hexnz,{hexdigit};
+binary = {"-"},"b",["0"|"1"],{"0"|"1"|"_"};
+nonz = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
+hexnz = nonz|"a"|"b"|"c"|"d"|"e"|"f"|"A"|"B"|"C"|"D"|"E"|"F";
+hexdigit = "0"|hexnz|"_";
+digit = "0"|nonz|"_";
+float = {decimal},["."|","],{decimal};
+bool = "Jo"|"Ne"|"JO"|"NE"|"jo"|"ne"|"jO"|"nE";
+alf = "a"|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"|"n"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|"A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"_";
+string = '"',{alf} ,'"';
