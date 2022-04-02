@@ -29,3 +29,6 @@ DECIMAL COMPARE DECIMAL
 DECIMAL COMPARE DECIMAL 
 BOOL MULTIPLY BOOL 
 STRING 
+
+ 
+ 0 of total errors detected in input file.

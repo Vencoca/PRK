@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 int yylex(void);
+int errors_detected=0;
 %}
 
 
 %%
-
-[ \t] {/*SKIP spaces and tabs */};
+[ \t \r] {/*SKIP spaces and tabs */};
 [!][*][^*]*[*]+([^*!][^*]*[*]+)*[!] {/*SKIP COMMENT */ }	
 [\.|,]|[1-9][0-9|_]*[\.|,][0-9|_]+|0[\.|,][0-9|_]+|[\.|,][0-9|_]+ { printf("%s ", "FLOAT");}
 [-]?[1-9][0-9|_]*|[+|-]?0 { printf ("%s ", "DECIMAL");}
@@ -21,6 +21,7 @@ int yylex(void);
 "<"|">"|"=="|"<="|">=" { printf("%s ", "COMPARE");}
 "\(" { printf("%s ", "LEFTBRACKET");}
 "\)" { printf("%s ", "RIGHTBRACKET");}
+.    {errors_detected++; printf("%s ",yytext);}
 
 
 %%
@@ -32,5 +33,7 @@ int yywrap(void){
 int main() {
     // Call the lexical analysis:
     yylex();
+    printf("\n \n %d of total errors detected in input file.",errors_detected);
     return 0;
 }
+
