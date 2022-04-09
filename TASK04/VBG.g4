@@ -2,11 +2,12 @@
 grammar VBG;
 //Syntaktická část
 root: (expr NLINE)+;
-expr: expr POWER expr
+
+expr: LEFTBRACKET expr RIGHTBRACKET
+    | expr POWER expr
     | expr MULTIPLY expr
     | expr SUM expr
     | expr COMPARE expr
-    | LEFTBRACKET expr RIGHTBRACKET
     | TYPE
     ;
 //Lexikální část
