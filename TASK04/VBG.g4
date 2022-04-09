@@ -1,7 +1,7 @@
 //Very Basic grammar
 grammar VBG;
 //Syntaktická část
-root: (expr NLINE)+;
+root: (expr NLINE|NLINE)+;
 
 expr: LEFTBRACKET expr RIGHTBRACKET
     | expr POWER expr
@@ -20,7 +20,7 @@ LEFTBRACKET: '(';
 RIGHTBRACKET : ')';
 COMPARE : '<'|'>'|'=='|'<='|'>=';
 //Datové typy
-DECIMAL: ('-')?[1-9][0-9|_]*|[+|-]?'0';
+DECIMAL: ('-')?[1-9][0-9|_]*|[-]?'0';
 HEXA: ('-')? 'h' [0-9a-fA-F][a-fA-F0-9|_]* ;
 BINARY: ('-')? 'b' ('0'|'1') ('0'|'1'|'_')*;
 FLOAT: [.|,]|[1-9][0-9|_]*[.|,][0-9|_]+|'0'[.|,][0-9|_]+;
