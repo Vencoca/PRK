@@ -1,0 +1,43 @@
+!*Data užitá k testování*!
+
+!*Nesprávné hodnoty:*!
+00
+_0.5
+b2001
+
+!*Nespárované sčítání*!
+0+
++1011
+
+!*Nespárované násobení:*!
+0*
+*1011
+
+!*Nespárované mocnění:*!
+6^
+^2
+
+!*Nespárované Porovnávání:*!
+>1
+2<=
+8=>
+
+!*Zdvojené operátory*!
+0**0
+100*+1011
+10++10
+10+10*+10*10+10
+8=====3
+8>=*3
+
+!*Závorky - jednoduché a nespárované*!
+(10+10*10)*(10+10
+10+10*10)*(10+10)
+
+!*Závorky - vložené a chybně párované*!
+((10+10)*10)*(10+10))
+(((10+10)*10)*(10+10)
+10+10)*10)*(10+10)
+
+!*Chybné stringy*!
+"ah""
